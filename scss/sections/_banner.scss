@@ -168,7 +168,8 @@
 
                     &:hover {
                         color: $white;
-                        background-color: $primary-color;
+                        background-color: $secondary-btn;
+                        border-color: $secondary-btn;
                     }
                 }
             }

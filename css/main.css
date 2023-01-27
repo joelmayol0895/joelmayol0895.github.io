@@ -1556,7 +1556,8 @@ nav > ul li.active a:after {
 }
 .section1 .about-content .about-content-wrapper .about-me a:hover {
   color: #ffffff;
-  background-color: #FCBD5F;
+  background-color: #0042e4;
+  border-color: #0042e4;
 }
 .section1 .active {
   display: block;
@@ -1944,6 +1945,9 @@ nav > ul li.active a:after {
 .section3 .skills-count ul li span {
   font-size: 1.5rem;
   line-height: 100%;
+}
+.section3 .skills-count ul li .value {
+  font-size: 2.5rem;
 }
 
 .section4 {
