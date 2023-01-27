@@ -57,7 +57,7 @@
     }
 
     .hire-me {
-        background: $secondary-btn;
+        background: $primary-color;
         color: $white;
         width: 200px;
         display: block;
@@ -126,7 +126,7 @@
                 img {
                     width: 100%;
                     height: 100%;
-                    background: red;
+                    object-fit: cover;
                 }
             }
 

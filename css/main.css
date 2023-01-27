@@ -1449,7 +1449,7 @@ nav > ul li.active a:after {
   color: #FCBD5F;
 }
 .section1 .hire-me {
-  background: #0042e4;
+  background: #FCBD5F;
   color: #ffffff;
   width: 200px;
   display: block;
@@ -1520,7 +1520,7 @@ nav > ul li.active a:after {
 .section1 .about-content .about-content-wrapper .about-img img {
   width: 100%;
   height: 100%;
-  background: red;
+  object-fit: cover;
 }
 .section1 .about-content .about-content-wrapper .about-me {
   width: 66%;
