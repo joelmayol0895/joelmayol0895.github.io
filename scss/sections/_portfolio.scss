@@ -1,0 +1,92 @@
+.section4 {
+    background-color: $secondary-bgcolor;
+
+    .content {
+        @include flex-space-between;
+
+        p {
+            @include content-size;
+            padding-top: 19px;
+        }
+    }
+
+    .portf-holder {
+        text-align: center;
+
+        .rslides1_nav {
+            color: $white;
+        }
+
+        .rslides_tabs {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            width: 100%;
+            overflow: hidden;
+            clear: both;
+            z-index: 2;
+            position: relative;
+
+            li {
+                margin: 0 7px;
+                display:inline-block;
+                
+                &.rslides_here {
+                    a {
+                        background: $secondary-btn;
+                    }
+                }
+
+                a {
+                    color: $white;
+                    background: $primary-btn;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    display: inline-block;
+                    padding: 4px;
+                }
+            }
+            
+        }
+
+        ul.rslides {
+            li {
+                @include flex-space-between;
+
+                [class^="portf-"]{
+                    width: 32%;
+                    margin-bottom: 5%;
+
+                    @media only screen and (max-width: 1600px) {
+                        width: 48%;
+                        margin: 0 auto 5%;
+                     }
+
+                     @media only screen and (max-width: 800px) {
+                        width: 100%;
+                        margin: 0 auto 5%;
+                     }
+                }
+
+                img {
+                    transform: translateY(0);
+                    transition: all 3s ease-in;
+                }
+                
+                a {
+                    display: flex;
+                    align-items: flex-start;
+                    overflow: hidden;
+                    height: 400px;
+                    position: relative;
+
+                    &:hover img {
+                        top: 50%;
+                        transform: translateY(-35%);
+                    }
+                }
+            }
+        }
+    }
+}

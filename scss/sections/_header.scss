@@ -1,0 +1,290 @@
+$contain: contain;
+
+.fixed-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    max-width: 350px;
+    width: 100%;
+    padding: 3% 2%;
+    height: 100%;
+    box-shadow: 0 0 8px 6px rgb(255 255 255 / 20%);
+    text-align: center;
+
+    @media only screen and (max-width: 1200px) {
+        position: static;
+        max-width: 100%;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .logo {
+        margin-bottom: 20%;
+
+        img {
+            max-width: 150px;
+            width: 100%;
+            margin-bottom: 6%;
+        }
+
+        h4 {
+            text-transform: uppercase;
+        }
+    }
+}
+
+nav > {
+    text-align: left;
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+
+    ul {
+        li {
+            margin-bottom: 8%;
+            width: 100%;
+            height: 59px;
+            margin-bottom: 1em;
+
+            @media only screen and (max-width: 1200px) { 
+                height: 39px;
+                margin-bottom: 2em;
+            }
+           
+            &:nth-child(2) a {
+                &::after {
+                    background: url(../images/exp-icon.png);
+                    background-size: $contain;
+                }
+            }
+
+            &:nth-child(3) a {
+                &::after {
+                    background: url(../images/skills-icon.png);
+                    background-size: $contain;
+                }
+            }
+
+            &:nth-child(4) a {
+                &::after {
+                    background: url(../images/portf-icon.png);
+                    background-size: $contain;
+                }
+            }
+
+            &:nth-child(5) a {
+                &::after {
+                    background: url(../images/contact-icon.png);
+                    background-size: $contain;
+                }
+            }
+
+            a {
+                font-size: $font-xsmall;
+                display: block;
+                background: $primary-btn;
+                padding: 18px 70px;
+                border-radius: 30px;
+                position: relative;
+                text-align: right;
+                color: rgba(255,255,255,.4);
+                text-transform: uppercase;
+                line-height: 26px;
+                height: 100%;
+                transition: opacity .3s ease-in;
+
+                @media only screen and (max-width: 1200px) { 
+                    padding: 7px 25px;
+                }
+    
+                &:before {
+                    content: "";
+                    background-color: $white;
+                    left: 12px;
+                    top: 4px;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    -webkit-transition: all .3s ease-in;
+                    -ms-transition: all .3s ease-in;
+                    transition: all .3s ease-in;
+                    border: 5px solid rgba(217,217,217.9);
+                    z-index: 1;
+
+                    @media only screen and (max-width: 1200px) { 
+                        top: -7px;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    right: 20px;
+                    top: 7px;
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    background: url(../images/home-icon.png);
+                    background-size: $contain;
+
+                    @media only screen and (max-width: 1200px) { 
+                        display: none;
+                    }
+                }
+            }
+
+            &.active a {
+                position: relative;
+                background: $secondary-btn;
+                font-size: $font-default;
+                padding-left: 41px;
+                text-align: left;
+                color: rgba(255,255,255,1);
+
+                @media only screen and (max-width: 1200px) { 
+                    font-size: 1.2rem;
+                }
+
+                &:before {
+                    left: 212px;
+
+                    @media only screen and (max-width: 1200px) { 
+                        left: 209px;
+                    }
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.social-media {
+    position: absolute;
+    bottom: 7%;
+    left: 0;
+    right: 0;
+    padding: 0 12%;
+
+    ul {
+        @include flex-space-between;
+
+        img {
+            max-width: 38px;
+            width: 100%;
+
+            @media only screen and (max-width: 1200px) {
+                max-width: 30px;
+             }
+        }
+    }
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+
+    @media only screen and (max-width: 1200px) {
+       display: none;
+    }
+}
+
+.nav_toggle_button {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    /* for nav toggle */
+    #nav_area {
+        position: relative;
+        min-height: 66px;
+        text-align: left;
+        padding: 16px;
+        border-bottom: 1px solid;
+    }
+
+    .mobile_logo {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav_toggle_button_active {
+        position: absolute;
+    }
+
+    .nav_toggle_button {
+        display: block;
+    }
+    
+    nav {
+        top: 0;
+        opacity: 0;
+        width: 300px;
+        position: fixed;
+        right: 0;
+        transition: all .5s linear;
+        height: 100%;
+        z-index: 51;
+        padding: 80px 15px 10px;
+
+        &.active {
+            top: 0;
+            right: 0;
+            opacity: 1;
+            background: $primary-bgcolor;
+        }
+
+        &:not(active) {
+            right: -300px;
+        }
+    }
+
+    .hamburger {
+        &.is-active {
+            .hamburger-box {
+                position: fixed;
+                top: auto;
+                right: 18px;
+                z-index: 52;
+            }
+
+            .hamburger-inner {
+                background-color: $white;
+
+                &:before {
+                    background-color: $white;
+                }
+
+                &:after {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    .nav_btn {
+        opacity: 0;
+        background: rgba(0,0,0,.7);
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        transition: all .5s linear;
+        z-index: 50;
+
+        &.nav_btn_active {
+            right: 0;
+            opacity: 1;
+        }
+    }
+	/* end of nav toggle */
+}

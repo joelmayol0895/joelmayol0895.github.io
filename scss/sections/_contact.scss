@@ -1,0 +1,80 @@
+.section5 {
+    background-color: $primary-bgcolor;
+
+    .wrapper {
+        text-align: center;
+    }
+
+    h2 {
+        &::before {
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .content p {
+        @include content-size;
+    }
+
+    .contact-details {
+        @include flex-space-between;
+
+        @media only screen and (max-width: 800px) { 
+            flex-direction: column;
+        }
+
+        .contact-info {
+            width: 48%;
+
+            @media only screen and (max-width: 800px) { 
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                
+                @include line-breaks;
+                text-align: left;
+
+                li {
+                    @include in-between;
+                    margin-bottom: 26px;
+
+                    @media only screen and (max-width: 800px) { 
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+
+                    span {
+                        text-align: left;
+                        width: 65px;
+                        @media only screen and (max-width: 800px) { 
+                            margin-bottom: 10px;
+                            width: auto;
+                        }
+                    }
+                }
+    
+                h3 {
+                    font-size: $font-medium;
+                    line-height: 100%;
+                    margin-bottom: 21px;
+                }
+    
+                p, a {
+                    font-size: $font-default;
+                    color: $white;
+                }
+            }
+        }
+
+        .map {
+            width: 48%;
+
+            @media only screen and (max-width: 800px) { 
+                width: 100%;
+            }
+        }
+        
+    }
+}

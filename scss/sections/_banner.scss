@@ -1,0 +1,196 @@
+.section1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    @media only screen and (max-width: 1200px) { 
+		height: 100%;
+	}
+
+    .wrapper {
+        @media only screen and (max-width: 800px) { 
+            padding: 8% 8% 13%;
+        }
+    }
+
+    .banner-content {
+        font-size: 2rem;
+        margin: 15px 0;
+        line-height: 100%;
+    }
+
+    .phil-text {
+        display: block;
+        font-size: $font-default;
+        margin-bottom: 40px;
+    }
+
+    .auto-type {
+        color: $primary-color;
+    }
+
+    h1 {
+        font-size: $font-large;
+        line-height: 100%;
+
+        @media only screen and (max-width: 800px) { 
+            font-size: 48px;
+            line-height: 60px;
+        }
+
+        @media only screen and (max-width: 400px) { 
+            font-size: 37px;
+            line-height: 53px;
+        }
+
+        span {
+            display: block;
+            font-size: $font-medium;
+            margin-bottom: 2%;
+        }
+
+        small {
+            color: $primary-color;
+        }
+    }
+
+    .hire-me {
+        background: $secondary-btn;
+        color: $white;
+        width: 200px;
+        display: block;
+        text-align: center;
+        padding: 20px;
+        border-radius: 30px;
+        font-size: $font-default;
+        margin: 7% auto 0;
+        transition: all .3s linear;
+        cursor: pointer;
+
+        &:hover {
+            background: $default-link;
+        }
+    }
+
+    .about-content {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 900px;
+        height: auto;
+        background: $primary-bgcolor;
+        max-width: 100%;
+        z-index: 9;
+        padding: 55px;
+        font-size: $font-default;
+        line-height: 35px;
+        text-align: justify;
+
+        @media only screen and (max-width: 400px) { 
+            font-size: 6vw;
+            padding-left: 28px;
+            padding-right: 28px;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 30px;
+            top: 12px;
+            font-size: 1.5rem;
+            font-family: cursive;
+            cursor: pointer;
+            color: $seconday-color;
+            z-index: 1;
+        }
+
+        .about-content-wrapper {
+            @include flex-space-between;
+
+            @media only screen and (max-width: 800px) { 
+                flex-direction: column;
+            }
+
+            .about-img {
+                width: 30%;
+
+                @media only screen and (max-width: 800px) { 
+                    width: 100%;
+                    max-width: 300px;
+                    max-height: 500px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    background: red;
+                }
+            }
+
+            .about-me {
+                width: 66%;
+                font-size: $font-xsmall;
+                font-family: sans-serif;
+
+                @media only screen and (max-width: 800px) { 
+                    width: 100%;
+                }
+
+                li {
+                    span {
+                        color: $primary-color;
+                        font-weight: 700;
+                    }
+                }
+
+                h4 {
+                    font-size: $font-default;
+                    color: $primary-color;
+                    font-weight: 700;
+                }
+
+                p {
+                    line-height: 26px;
+                }
+
+                a {
+                    border: 1px solid $primary-color;
+                    padding: 10px 15px;
+                    color: $primary-color;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    float: right;
+                    font-weight: 700;
+                    margin-top: 20px;
+
+                    &:hover {
+                        color: $white;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .active {
+        display: block;
+    }
+
+    .overlay {
+        &::before {
+            content: "";
+            background: rgba(0,0,0,.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
+    }
+}

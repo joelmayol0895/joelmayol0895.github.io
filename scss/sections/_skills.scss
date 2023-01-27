@@ -1,0 +1,123 @@
+.section3 {
+    background-color: $primary-bgcolor;
+
+    h2 {
+        width: 100%;
+
+        &:before {
+            width: 90px;
+
+            @media only screen and (max-width: 1684px) {
+                width: 60px;
+            }
+        }
+    }
+
+    .wrapper {
+        @include line-breaks;
+    }
+
+    // .skills-content {
+    //     order: 2;
+
+    //     @media only screen and (max-width: 1684px) {
+    //         order: initial;
+    //     }
+    // }
+
+    .skills-content,.skills-graph {
+        width: 100%;
+
+        @media only screen and (max-width: 1684px) {
+            width: 100%;
+        }
+
+        p {
+            @include content-size;
+
+            @media only screen and (max-width: 800px) {
+                font-size: 20px;
+
+                &:last-of-type {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+
+        ul {
+            @include flex-space-between;
+    
+            li {
+                width: 48%;
+                margin-bottom: 4%;
+    
+                @media only screen and (max-width: 800px) {
+                    width: 100%;
+                }
+    
+                @media only screen and (max-width: 500px) {
+                    margin-bottom: 25px;
+                }
+                
+                h4 {
+                    font-size: $font-default;
+                    line-height: 100%;
+                    margin-bottom: 2%;
+    
+                    @media only screen and (max-width: 500px) {
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                    }
+                }
+    
+                .progress {
+                    background: $white;
+                    width: 100%;
+                    height: 16px;
+                    border-radius: 25px;
+                    box-shadow: 0 0 0 2px $white;
+    
+                    .progress-bar {
+                        background: $third-color;
+                        width: 0%;
+                        opacity: 0;
+                        height: 100%;
+                        border-radius: 25px 0 0 25px;
+                        transition: all .5s linear ;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .skills-count {
+        background-color: $secondary-bgcolor;
+        ul {
+            @include flex-space-between;
+
+            li {
+                width: 32%;
+                text-align: center;
+
+                @media only screen and (max-width: 800px) { 
+                    width: 100%;
+                    margin-bottom: 27px;
+                }
+
+                h4 {
+                    font-size: $font-medium;
+                    color: $primary-color;
+                    line-height: 100%;
+                    margin: 20px 0;
+                }
+
+                span {
+                    font-size: $font-default;
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+    
+}
