@@ -69,7 +69,7 @@
         <div class="skills-count">
             <ul>
                 <li>
-                    <h4 class="value">7</h4>
+                    <h4 class="value">8</h4>
                     <span>Years Of Experience</span>
                 </li>
                 <li>
