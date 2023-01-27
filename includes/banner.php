@@ -11,7 +11,7 @@
             <div class="about-content-wrapper">
 
                 <div class="about-img">
-                    <img src="" alt="">
+                    <img src="images/profile.jpg" alt="profile picture">
                 </div>
 
                 <div class="about-me">
